@@ -76,6 +76,18 @@ a , a:hover {
     background-size: cover;
     padding: 0 150px;
 }
+.img-star {
+    height: 90vh;
+}
+.star-left {
+    left: 0;
+}
+.star-right {
+    right: 0;
+}
+.movie-watch img {
+    max-width: 250px;
+}
 .movie-title {
     font-weight: 400;
     position: relative;
@@ -129,6 +141,8 @@ a , a:hover {
     font-size: 20px;
     text-align: center;
     font-weight: 500;
+    line-height: initial;
+    word-break: keep-all;
 }
 .youtube, .youtube iframe {
     width: 100%;
@@ -404,17 +418,6 @@ a , a:hover {
         font-size: 35px;
         margin-bottom: 30px;
     }
-}
-@media only screen and (max-width: 768px) {
-    .navbar {
-        height: 50px;
-    }
-    .navbar .logo svg {
-        height: 25px;
-    }
-    .hamburger-menu {
-        top: 12px;
-    }
     #section0 {
         padding: 50px 0;
     }
@@ -429,32 +432,28 @@ a , a:hover {
     #section0 .movie-btn {
         transform: scale(0.6);
     }
-    #section0.bg-black-cover:before {
-        z-index: 4;
+    .movie-title {
+        margin-bottom: 0;
     }
-    #section0 .img-star {
-        height: 80vh;
-        bottom: -10vh;
+    .movie-watch img {
+        max-width: 180px;
+        min-width: 180px;
     }
-    #section0 .img-star.left {
-        left: -20vw;
-        z-index: 2;
+    .img-star {
+        height: 70vh;
     }
-    #section0 .img-star.right {
-        right: -20vw;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        height: 50px;
     }
-    #section0 .img-watch {
-        z-index: 3;
-        width: 35vw;
-        bottom: 0;
+    .navbar .logo svg {
+        height: 25px;
     }
-    #section0 .img-watch.left {
-        left: 10vw;
+    .hamburger-menu {
+        top: 12px;
     }
-    #section0 .img-watch.right {
-        right: 10vw;
-    }
-
+    
     #section2 {
         padding: 100px 0px;
     }

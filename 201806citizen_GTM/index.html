@@ -212,55 +212,48 @@
     </div>
     <div id="fullpage">
         <div class="section bg-black-cover d-flex align-items-end" data-anchor="home" id="section0">
-            <div class="h-100 d-none d-md-flex align-items-end full-wrap">
-                <div class="d-flex justify-content-between w-100">
-                    <div class="d-flex align-items-end col-4">
-                        <img class="img-star w-100" src="images/section0/star_1.png" />
+            <div class="h-100 d-flex align-items-end full-wrap">
+                <div class="d-flex justify-content-between align-items-end position-relative w-100 h-100">
+                    <div class="d-flex align-items-end position-absolute star-right">
+                        <img class="img-star" src="images/section0/star_2.png" />
                     </div>
-                    <div class="s0-movie col-4 h-100 d-flex flex-column position-absolute align-items-center justify-content-center">
-                        <h2 class="movie-title text-center color-white">每一步 都是突破</h2>
-                        <div class="movie-watch d-flex align-items-center justify-content-center">
-                            <img class="w-50" src="images/section0/b_watch_1.png" />
-                            <img class="w-50" src="images/section0/b_watch_2.png" />
+                    <div class="d-flex align-items-end position-absolute star-left">
+                        <img class="img-star" src="images/section0/star_1.png" />
+                    </div>
+                    <div class="s0-movie h-100 w-100 d-flex flex-column position-absolute align-items-center justify-content-around justify-content-lg-center">
+                        <div class="d-flex flex-column">
+                            <h2 class="movie-title text-center color-white">每一步 都是突破</h2>
+                            <div class="movie-btn d-lg-none d-block m-0">
+                                <a href="javascript:open1()" class="d-flex align-items-center justify-content-center">
+                                    <span class="btn-play">
+                                            <svg width="30%" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-play svg-inline--fa">
+                                                <path fill="#333333" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" class=""></path>
+                                            </svg>
+                                    </span>
+                                    <span class="play-title color-white">20秒電視廣告</span>
+                                </a>
+                                <div class="movie-bg" style="background-image:url('images/section3/movie-0.jpg'); background-color: black;"></div>
+                            </div>
                         </div>
-                        <div class="movie-btn">
-                            <a href="javascript:open1()" class="d-flex align-items-center justify-content-center">
-                                <span class="btn-play">
-                                        <svg width="30%" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-play svg-inline--fa">
-                                            <path fill="#333333" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" class=""></path>
-                                        </svg>
-                                </span>
-                                <span class="play-title color-white">20秒電視廣告</span>
-                            </a>
-                            <div class="movie-bg" style="background-image:url('images/section3/movie-0.jpg'); background-color: black;"></div>
+                        <div class="d-flex flex-column">
+                            <div class="movie-watch d-flex align-items-center justify-content-center">
+                                <img class="w-50" src="images/section0/b_watch_1.png" />
+                                <img class="w-50" src="images/section0/b_watch_2.png" />
+                            </div>
+                            <div class="movie-btn d-lg-block d-none">
+                                <a href="javascript:open1()" class="d-flex align-items-center justify-content-center">
+                                    <span class="btn-play">
+                                            <svg width="30%" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-play svg-inline--fa">
+                                                <path fill="#333333" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" class=""></path>
+                                            </svg>
+                                    </span>
+                                    <span class="play-title color-white">20秒電視廣告</span>
+                                </a>
+                                <div class="movie-bg" style="background-image:url('images/section3/movie-0.jpg'); background-color: black;"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="d-flex col-4 align-items-end">
-                        <img class="img-star w-100" src="images/section0/star_2.png" />
-                    </div>
-                </div>
-            </div>
-            <!-- MD Mobile -->
-            <div class="d-md-none d-flex flex-column align-items-center justify-content-start h-100 w-100">
-                <div class="movie w-100 d-flex flex-column align-items-center justify-content-center">
-                    <h2 class="movie-title text-center color-white mb-0">每一步 都是突破</h2>
-                    <div class="movie-btn mt-0">
-                        <a href="javascript:open1()" class="d-flex align-items-center justify-content-center">
-                            <span class="btn-play">
-                                    <svg width="30%" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-play svg-inline--fa">
-                                        <path fill="#333333" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" class=""></path>
-                                    </svg>
-                            </span>
-                            <span class="play-title color-white">20秒電視廣告</span>
-                        </a>
-                        <div class="movie-bg" style="background-image:url('images/section3/movie-0.jpg'); background-color: black;"></div>
-                    </div>
-                </div>
-                <div class="d-flex w-100">
-                    <img class="img-star left position-absolute" src="images/section0/star_1.png" />
-                    <img class="img-watch left position-absolute" src="images/section0/b_watch_1.png" />
-                    <img class="img-star right position-absolute" src="images/section0/star_2.png" />
-                    <img class="img-watch right position-absolute" src="images/section0/b_watch_2.png" />
+                    
                 </div>
             </div>
         </div>
