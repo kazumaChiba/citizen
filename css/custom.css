@@ -22,7 +22,7 @@ a , a:hover {
     height: 100%;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.1);
     z-index: 2;
 }
 .fp-tableCell{
@@ -80,10 +80,12 @@ a , a:hover {
     height: 90vh;
 }
 .star-left {
-    left: 0;
+    display: flex;
+    left: -20vh;
 }
 .star-right {
-    right: 0;
+    display: flex;
+    right: -10vh;
 }
 .movie-watch img {
     max-width: 250px;
@@ -101,11 +103,16 @@ a , a:hover {
     width: 100vw; 
     height: 100vh; 
     top: 0; 
-    left: 0; 
+    left: -150px; 
     z-index: 99; 
     background-position: center; 
     background-size: cover; 
-    transition: all 0.5s;
+}
+.movie-btn.preview {
+    display: block;
+}
+.movie-btn {
+    display: none;
 }
 .movie-btn {
     margin-top: 30px;
@@ -114,10 +121,6 @@ a , a:hover {
     margin: 0 auto;
     padding: 10px 30px;
     opacity: 0.8;
-}
-.movie-btn a:hover + .movie-bg{
-    opacity: 1;
-    visibility: visible;
 }
 .movie-bg:before { 
     content: ''; 
@@ -153,11 +156,11 @@ a , a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+    justify-content: center;
 }
 /* Section 1 */
 #section1 {
     color: white;
-/*    padding: 50px 0;*/
 }
 .section-header{
     font-size: 45px;
@@ -260,6 +263,8 @@ a , a:hover {
 /* section2 */
 .project-container {
     padding: 200px 100px;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 #section2:before {
     content: '';
@@ -271,12 +276,17 @@ a , a:hover {
     left: 0;
     bottom: 0;
 }
-
+.movie-content {
+    display: flex;
+}
+.movie-content-mobile {
+    display: none;
+}
 .watch-right {
     flex: 1;
 }
 .watch-right .watch-img {
-    width: auto;
+    display: flex;
 }
 .watch-right {
     width: 20%;
@@ -337,6 +347,8 @@ a , a:hover {
     line-height: initial;
     text-align: right;
     margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .watch-left .list img {
     width: 120%;
@@ -388,22 +400,88 @@ a , a:hover {
 .tech-movie:hover .btn-play {
     opacity: 1;
 }
+#section3 .ps {
+    left: 30px;
+    position: relative;
+    bottom: 0;
+    top: 10vh;
+}
+
+@media only screen and (max-width: 1200px){
+    .section-nav {
+        display: none;
+    }
+    .watch-right li {
+        padding-right: 0;
+    }
+}
 @media only screen and (max-width: 1024px) {
-    .movie-btn a:hover + .movie-bg{
-        opacity: 0;
-        visibility: hidden;
+    .bg-black-cover:before {
+/*        background: rgba(0, 0, 0, 0.1);*/
+        content: none;
+    }
+    .star-left {
+        left: -15vw;
+    }
+    .star-right {
+        right: -15vw;
+    }
+    #section2 .heading img {
+        width: 80%;
+        margin: 0 auto 40px auto;
+    }
+    .star-left , .star-right , .movie-watch {
+        display: none;
+    }
+    #section0 {
+        padding: 0;
+        height: calc(100% - 50px);
+    }
+    #section0 .full-wrap {
+        margin: 50px 0 0 0;
+        height: calc(100% - 50px) !important;
+    }
+    .movie-content {
+        display: none;
+    }
+    .movie-content-mobile {
+        display: block;
+        width: auto;
+        max-height: 70vh;
+    }
+    .movie-btn.preview {
+        display: none;
+    }
+    .movie-btn {
+        display: block;
+    }
+    #section0 .movie-title {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    #section0 .movie-btn {
+        transform: scale(0.6);
+    }
+    .movie-title {
+        margin-bottom: 0;
+    }
+    #section0 .s0-movie {
+        justify-content: space-between;
+        overflow: hidden;
     }
 }
 @media only screen and (max-width: 991px) {
     .navbar {
         height: 70px;
-        background: black;
     }
     .navbar .logo svg {
         height: 40px;
     }
     .wlogo_title {
         font-size: 20px;
+    }
+    .watch-right {
+        width: 100%;
     }
     .watch-right li {
         transform: translate(-10% , 0);
@@ -418,78 +496,9 @@ a , a:hover {
         font-size: 35px;
         margin-bottom: 30px;
     }
-    #section0 {
-        padding: 50px 0;
-    }
     #section0 .movie {
         margin-top: 120px;
         z-index: 5;
-    }
-    #section0 .movie-title {
-        font-size: 30px;
-        letter-spacing: 5px;
-    }
-    #section0 .movie-btn {
-        transform: scale(0.6);
-    }
-    .movie-title {
-        margin-bottom: 0;
-    }
-    .movie-watch img {
-        max-width: 180px;
-        min-width: 180px;
-    }
-    .img-star {
-        height: 70vh;
-    }
-}
-@media only screen and (max-width: 768px) {
-    .navbar {
-        height: 50px;
-    }
-    .navbar .logo svg {
-        height: 25px;
-    }
-    .hamburger-menu {
-        top: 12px;
-    }
-    
-    #section2 {
-        padding: 100px 0px;
-    }
-    #section2:before {
-        transform: skew(-50deg) translateX(180%);
-    }
-    #section2 .heading img {
-        width: 80%;
-        margin: 0 auto 40px auto;
-    }
-    #section3 {
-        padding: 80px 30px;
-    }
-    #section3 .ps {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-    }
-    #section3 .btn-other a {
-        margin: 15px auto;
-    }
-    #section3 .btn-other:first-child {
-        margin-bottom: 15px
-    }
-    #section3 .btn-other:last-child {
-        margin-top: 15px
-    }
-    .project-container {
-        padding: 0;
-    }
-    .watch-left li {
-        width: calc(100% / 3);
-    }
-    .watch-left .list img {
-        width: 140%;
     }
     .btn-img {
         position: relative;
@@ -502,5 +511,57 @@ a , a:hover {
     }
     .btn-img img {
         width: 60vw;
+        max-width: 290px;
     }
+    .project-container {
+        padding: 0;
+    }
+    #section2 {
+        padding: 100px 0px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        height: 50px;
+    }
+    .navbar .logo svg {
+        height: 25px;
+    }
+    .hamburger-menu {
+        top: 12px;
+    }
+    #section1 {
+        padding: 50px 0 10px 0;
+    }
+    #section2:before {
+        transform: skew(-50deg) translateX(180%);
+    }
+    #section3 {
+        padding: 80px 30px;
+    }
+    #section3 .ps {
+        position: relative;
+        bottom: 0;
+        left: 0px;
+        text-align: center;
+    }
+    #section3 .btn-other a {
+        margin: 15px auto;
+    }
+    #section3 .btn-other:first-child {
+        margin-bottom: 15px
+    }
+    #section3 .btn-other:last-child {
+        margin-top: 15px
+    }
+    .watch-left li {
+        width: calc(100% / 3);
+    }
+    .watch-left .list img {
+        width: 140%;
+    }
+}
+@media only screen and (max-width: 580px){
+    
+    
 }

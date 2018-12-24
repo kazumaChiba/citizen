@@ -39,6 +39,19 @@ $(document).ready(function(){
         opacity: 1,
         ease: Quart.easeOut,
     }).delay(1.5);
+    
+    $(".preview").on("mouseenter",function(){
+         TweenMax.to(".movie-bg",0.5,{
+            autoAlpha: 1, 
+            display: 'block',
+         }); 
+    });
+    $(".preview").on("mouseleave",function(){
+         TweenMax.to(".movie-bg",0.5,{
+            autoAlpha: 0, 
+            display: 'none',
+         }); 
+    });
 
 });
  

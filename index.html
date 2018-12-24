@@ -66,7 +66,7 @@
             navigation: false,
             navigationPosition: 'right',
             css3: true,
-            dragAndMove: true,
+//            dragAndMove: true,
             onLeave: function(origin, destination, direction){
                 TweenMax.set(".nav-item.active",{
                     className: '-=active',
@@ -81,7 +81,7 @@
   
         });
         
-        if($(window).width() <= 768){
+        if($(window).width() <= 1024){
             $.fn.fullpage.setAutoScrolling(false);
         }
 
@@ -106,15 +106,7 @@
         <div class="logo_loader"></div>
     </div>
     <footer>
-        <p>© 2018 Citizen Watch Co.,Ltd</p>
-        <div class="pc">
-            <div class="txt"><a href="https://www.facebook.com/CitizenWatch.tw" target="_blank">Citizen Taiwan粉絲團</a></div>
-            <!-- fb_box -->
-            <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/CitizenWatch.tw" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=1682904321970472&amp;container_width=167&amp;href=https%3A%2F%2Fwww.facebook.com%2FCitizenWatch.tw&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey&amp;share=false&amp;show_faces=true"><span style="vertical-align: bottom; width: 73px; height: 20px;"><iframe name="f2a6e92856ee548" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 73px; height: 20px; float: right;margin-top: 15px;margin-right: 20px;" src="https://www.facebook.com/v2.6/plugins/like.php?action=like&amp;app_id=1682904321970472&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FXBwzv5Yrm_1.js%3Fversion%3D42%23cb%3Dfa664bb8d95db%26domain%3Dambassador.citizenwatch.com.tw%26origin%3Dhttp%253A%252F%252Fambassador.citizenwatch.com.tw%252Ff38dbc41362823a%26relation%3Dparent.parent&amp;container_width=167&amp;href=https%3A%2F%2Fwww.facebook.com%2FCitizenWatch.tw&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey&amp;share=false&amp;show_faces=true" class="" width="1000px" height="1000px" frameborder="0"></iframe></span></div>
-            <!-- 分享btn -->
-            <div class="fb-share-button fb_iframe_widget" data-href="http://ambassador.citizenwatch.com.tw" data-layout="button_count" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1682904321970472&amp;container_width=181&amp;href=http%3A%2F%2Fambassador.citizenwatch.com.tw%2F&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey"><span style="vertical-align: bottom; width: 88px; height: 20px;"><iframe name="ff76939d78a8f" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:share_button Facebook Social Plugin" style="border: medium none; visibility: visible; width: 88px; height: 20px; border: medium none;float: right;margin-top: 15px;margin-right: 20px;
-" src="https://www.facebook.com/v2.6/plugins/share_button.php?app_id=1682904321970472&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FXBwzv5Yrm_1.js%3Fversion%3D42%23cb%3Df7453c69b7182a%26domain%3Dambassador.citizenwatch.com.tw%26origin%3Dhttp%253A%252F%252Fambassador.citizenwatch.com.tw%252Ff38dbc41362823a%26relation%3Dparent.parent&amp;container_width=181&amp;href=http%3A%2F%2Fambassador.citizenwatch.com.tw%2F&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey" class="" width="1000px" height="1000px" frameborder="0"></iframe></span></div>
-        </div>
+        <p class="text-white">© 2019 CITIZEN WATCH CO., LTD</p>
     </footer>
     <div class="youtube_lb movieplay_1">
         <!-- <div class="btn_x btn_x1" id='pause'> </div> -->
@@ -193,7 +185,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="section-nav d-none d-lg-block">
+        <div class="section-nav">
             <ul class="h-100 d-flex flex-column justify-content-center">
                 <li class="nav-item active">
                     <a href="#home">每一步 都是突破</a></li>
@@ -214,16 +206,16 @@
         <div class="section bg-black-cover d-flex align-items-end" data-anchor="home" id="section0">
             <div class="h-100 d-flex align-items-end full-wrap">
                 <div class="d-flex justify-content-between align-items-end position-relative w-100 h-100">
-                    <div class="d-flex align-items-end position-absolute star-right">
+                    <div class="align-items-end position-absolute star-right">
                         <img class="img-star" src="images/section0/star_2.png" />
                     </div>
-                    <div class="d-flex align-items-end position-absolute star-left">
+                    <div class="align-items-end position-absolute star-left">
                         <img class="img-star" src="images/section0/star_1.png" />
                     </div>
-                    <div class="s0-movie h-100 w-100 d-flex flex-column position-absolute align-items-center justify-content-around justify-content-lg-center">
+                    <div class="s0-movie h-100 w-100 d-flex flex-column position-absolute align-items-center">
                         <div class="d-flex flex-column">
                             <h2 class="movie-title text-center color-white">每一步 都是突破</h2>
-                            <div class="movie-btn d-lg-none d-block m-0">
+                            <div class="movie-btn">
                                 <a href="javascript:open1()" class="d-flex align-items-center justify-content-center">
                                     <span class="btn-play">
                                             <svg width="30%" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-play svg-inline--fa">
@@ -235,12 +227,13 @@
                                 <div class="movie-bg" style="background-image:url('images/section3/movie-0.jpg'); background-color: black;"></div>
                             </div>
                         </div>
-                        <div class="d-flex flex-column">
-                            <div class="movie-watch d-flex align-items-center justify-content-center">
+                        <img class="movie-content-mobile" src="images/section0/mobile.png" />
+                        <div class="movie-content flex-column">
+                            <div class="movie-watch d-flex align-items-center justify-content-around">
                                 <img class="w-50" src="images/section0/b_watch_1.png" />
                                 <img class="w-50" src="images/section0/b_watch_2.png" />
                             </div>
-                            <div class="movie-btn d-lg-block d-none">
+                            <div class="movie-btn preview">
                                 <a href="javascript:open1()" class="d-flex align-items-center justify-content-center">
                                     <span class="btn-play">
                                             <svg width="30%" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-play svg-inline--fa">
@@ -249,13 +242,13 @@
                                     </span>
                                     <span class="play-title color-white">20秒電視廣告</span>
                                 </a>
-                                <div class="movie-bg" style="background-image:url('images/section3/movie-0.jpg'); background-color: black;"></div>
                             </div>
+                            <div class="movie-bg" style="background-image:url('images/section3/movie-0.jpg'); background-color: black;"></div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
+            
         </div>
         <!-- movie -->
         <div class="section" data-anchor="watch"  id="section1">
@@ -351,7 +344,7 @@
                 </div>
             </div>
         </div>
-        <div class="section fp-auto-height-responsive" data-anchor="project" id="section2">
+        <div class="section" data-anchor="project" id="section2">
             <div class="project-container h-100 d-flex flex-column justify-content-center">
                 <div class="heading">
                     <img class="w-50 d-none d-lg-block" src="images/section2/title.png" alt="" class="pc">
@@ -436,7 +429,7 @@
                         <ul class="h-100">
                             <li class="active">
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=644" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch0_b.png" alt=""></div>
+                                    <img src="images/section2/watch0_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">CC7005-16G</h5>
                                         <h6 class="text-white"><span>NT$</span>102,800</h6>
@@ -449,7 +442,7 @@
                             </li>
                             <li>
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=641" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch1_b.png" alt=""></div>
+                                    <img src="images/section2/watch1_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">CC4004-58F</h5>
                                         <h6 class="text-white"><span>NT$</span>84,800</h6>
@@ -462,7 +455,7 @@
                             </li>
                             <li>
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=640" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch2_b.png" alt=""></div>
+                                    <img src="images/section2/watch2_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">BZ1044-08E</h5>
                                         <h6 class="text-white"><span>NT$</span>26,800</h6>
@@ -475,7 +468,7 @@
                             </li>
                             <li>
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=647" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch3_b.png" alt=""></div>
+                                    <img src="images/section2/watch3_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">EE4058-19E</h5>
                                         <h6 class="text-white"><span>NT$</span>17,800</h6>
@@ -488,7 +481,7 @@
                             </li>
                             <li>
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=645" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch4_b.png" alt=""></div>
+                                    <img src="images/section2/watch4_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">EC1144-26E</h5>
                                         <h6 class="text-white"><span>NT$</span>29,800</h6>
@@ -502,7 +495,7 @@
                             </li>
                             <li>
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=642" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch5_b.png" alt=""></div>
+                                    <img src="images/section2/watch5_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">AV0077-82E</h5>
                                         <h6 class="text-white"><span>NT$</span>28,800</h6>
@@ -515,7 +508,7 @@
                             </li>
                             <li>
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=643" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch6_b.png" alt=""></div>
+                                    <img src="images/section2/watch6_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">CA0716-19E</h5>
                                         <h6 class="text-white"><span>NT$</span>16,800</h6>
@@ -528,7 +521,7 @@
                             </li>
                             <li>
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=633" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch7_b.png" alt=""></div>
+                                    <img src="images/section2/watch7_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">CA0457-82E</h5>
                                         <h6 class="text-white"><span>NT$</span>12,800</h6>
@@ -541,7 +534,7 @@
                             </li>
                             <li>
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=639" target="_blank">
-                                    <div class="watch-img"><img src="images/section2/watch8_b.png" alt=""></div>
+                                    <img src="images/section2/watch8_b.png" alt="">
                                     <div class="txt">
                                         <h5 class="text-white">EM0659-17E</h5>
                                         <h6 class="text-white"><span>NT$</span>25,800</h6>
@@ -566,12 +559,12 @@
                     <div class="tech-movie mr-0 mr-md-3">
                         <p class="title text-white text-center">GPS衛星對時</p>
                         <div class="movie-btn-2 position-relative">
-                            <span class="btn-play">
+                            <a href="javascript:open3()">
+                                <span class="btn-play">
                                     <svg width="30%" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-play svg-inline--fa">
                                         <path fill="white" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" class=""></path>
                                     </svg>
-                            </span>
-                            <a href="javascript:open3()">
+                                </span>
                                 <img class="m-img w-100" src="images/section3/video_1.png" alt="">
                                 <div class="icon-arrow"></div>
                             </a>
@@ -580,12 +573,12 @@
                     <div class="tech-movie ml-0 ml-md-3">
                         <p class="title text-white text-center">光動能</p>
                         <div class="movie-btn-2 position-relative">
-                            <span class="btn-play">
+                            <a href="javascript:open4()">
+                                <span class="btn-play">
                                     <svg width="30%" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-play svg-inline--fa">
                                         <path fill="white" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" class=""></path>
                                     </svg>
-                            </span>
-                            <a href="javascript:open4()">
+                                </span>
                                 <img class="m-img w-100" src="images/section3/video_2.png" alt="">
                                 <div class="icon-arrow"></div>
                             </a>
@@ -598,7 +591,9 @@
                     <div class="btn-other" style="order:1"><a href="http://www.citizenwatch.com.tw/technology3.asp" target="_blank">衛星對時</a></div>
                 </div>
             </div>
-            <p class="ps">※ 實際商品規格以現場實物為準。</p>
+            <div class="full-wrap">
+                <p class="ps">※ 實際商品規格以現場實物為準。</p>
+            </div>
         </div>
     </div>
 <!--
