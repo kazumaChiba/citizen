@@ -40,6 +40,16 @@ $(document).ready(function(){
         ease: Quart.easeOut,
     }).delay(1.5);
     
+    TweenMax.to(".img-star",1,{
+        opacity: 1,
+        ease: Quart.easeOut,
+    }).delay(1.5);
+    
+    TweenMax.to(".star-right , .star-left",1,{
+        x: 0,
+        ease: Quart.easeOut,
+    }).delay(1.5);
+    
     $(".preview").on("mouseenter",function(){
          TweenMax.to(".movie-bg",0.5,{
             autoAlpha: 1, 
