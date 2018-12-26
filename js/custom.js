@@ -35,6 +35,7 @@ $(document).ready(function(){
           className: '+=active',
         });    
     });
+    
     TweenMax.to(".s0-movie",1,{
         opacity: 1,
         ease: Quart.easeOut,
@@ -64,4 +65,3 @@ $(document).ready(function(){
     });
 
 });
- 

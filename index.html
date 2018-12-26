@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link href="css/fullpage.css" rel="stylesheet">
     <link rel="stylesheet" href="css/web.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link href="https://cdn.bootcss.com/fullPage.js/3.0.4/fullpage.min.css" rel="stylesheet">
     
     <meta name="viewport" content="width=device-width=1">
     <meta name="description" content="CITIZEN 藍正龍x吳慷仁最新代言鉅作，以CITIZEN品牌哲學「Better Starts Now」出發，用最精簡的詞彙道出品牌勇於探索的精神淵源。">
     <meta name="keywords" content="藍正龍,吳慷仁, 藍正龍代言,吳慷仁代言, 藍正龍代言錶, 吳慷仁代言錶, 藍正龍廣告,吳慷仁廣告, 藍正龍最新代言,吳慷仁最新代言, 藍正龍男錶,吳慷仁男錶, CITIZEN男錶, CITIZEN, 星辰, 星辰錶, 星辰表, 衛星錶,GPS,電波錶, eco-drive, 光動能, 太陽能, 男錶">
-    <meta property="og:url" content="http://ambassador.citizenwatch.com.tw/" /></meta>
+    <meta property="og:url" content="http://ambassador.citizenwatch.com.tw/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://ambassador.citizenwatch.com.tw/">
     <meta property="og:title" content="CITIZEN 藍正龍x吳慷仁代言網站">
@@ -45,45 +45,63 @@
         }
     }
     </script>
+    <script>
+        // alert(window.navigator.userAgent);
+        $(document).ready(function(){
+            if(window.navigator.userAgent.indexOf("MSIE") > -1 || window.navigator.userAgent.indexOf("Trident/") > -1){
+                $(".section-nav").css("display","none");
+                $(".hamburger-menu").removeClass("d-lg-none");
+                $(".social-media").css("right",'73px');
+                // $(".nav-item").on("click",function(){
+                //     let index = $(this).index() - 1;
+                //     let top = $(".section").eq(index);
+                //     $('html,body').animate({
+                //         scrollTop: top.offset().top
+                //     },500);
+                // });
+            }
+        });
+        
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/greensock/plugins/CSSPlugin.min.js"></script>
     <script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/greensock/TweenLite.min.js"></script>
     <script type="text/javascript" src="js/jquery.gsap.js"></script>
     <script type="text/javascript" src="js/vendors/scrolloverflow.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <script src="js/jquery.loadie.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="js/fullpage.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $('#fullpage').fullpage({
             anchors: ['home', 'watch', 'project', 'tech'],
-            sectionsColor: ['#000', '#789cb2', '#000', '#000'],
+            // sectionsColor: ['#000', '#789cb2', '#000', '#000'],
             menu: '#menu',
+            // licenseKey: '',
             navigation: false,
             navigationPosition: 'right',
-            css3: true,
+            // css3: true,
+            // setAutoScrolling: false,
 //            dragAndMove: true,
             onLeave: function(origin, destination, direction){
                 TweenMax.set(".nav-item.active",{
                     className: '-=active',
                 });
-                TweenMax.set(".nav-item:nth-of-type("+destination+")",{
+                TweenMax.set(".nav-item:nth-of-type("+(destination.index)+")",{
                     className: '+=active',
                 });
                 TweenMax.to(".nav-line",0.5,{
-                    y: $(".section-nav .nav-item").height()*(destination - 1),
+                    y: $(".section-nav .nav-item").height()*(destination.index),
                 });
             },
   
         });
-        
-        if($(window).width() <= 1024){
-            $.fn.fullpage.setAutoScrolling(false);
-        }
+        $.fn.fullpage.setAutoScrolling(false);
 
     });
     </script>
@@ -176,15 +194,15 @@
             <nav>
                 <ul id="menu">
                     <li class="nav-item active">
-                        <a href="#home">每一步 都是突破</a></li>
+                        <a href="#section0">每一步 都是突破</a></li>
                     <li class="nav-item">
-                        <a href="#watch">全新錶現</a>
+                        <a href="#section1">全新錶現</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#project">特別企劃</a>
+                        <a href="#section2">特別企劃</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#tech">創新技術</a>
+                        <a href="#section3">創新技術</a>
                     </li>
                 </ul>
             </nav>
@@ -192,15 +210,15 @@
         <div class="section-nav">
             <ul class="h-100 d-flex flex-column justify-content-center">
                 <li class="nav-item active">
-                    <a href="#home">每一步 都是突破</a></li>
+                    <a href="#section0">每一步 都是突破</a></li>
                 <li class="nav-item">
-                    <a href="#watch">全新錶現</a>
+                    <a href="#section1">全新錶現</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#project">特別企劃</a>
+                    <a href="#section2">特別企劃</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#tech">創新技術</a>
+                    <a href="#section3">創新技術</a>
                 </li>
                 <li class="nav-line"></li>
             </ul>
@@ -309,7 +327,7 @@
                     <div class="watch-cate d-flex flex-column align-items-center justify-content-center">
                         <img src="images/section1/wlogo_1.png" />
                         <p class="wlogo_title">光動能GPS衛星對時</p>
-                        <div class="d-flex align-items-start justify-content-center">
+                        <div class="d-flex align-items-start justify-content-center w-100">
                             <div class="watch-content text-center">
                                 <img class="img-watch" class="img-logo" src="images/section1/n_watch_1.png" />
                                 <p class="watch_model">CC4004-58E<br>NT$73,800</p>
@@ -325,7 +343,7 @@
                     <div class="watch-cate d-flex flex-column align-items-center justify-content-center">
                             <img class="img-logo" src="images/section1/wlogo_2.png" />
                             <p class="wlogo_title">光動能GPS衛星對時</p>
-                            <div class="d-flex align-items-start justify-content-center">
+                            <div class="d-flex align-items-start justify-content-center w-100">
                                 <div class="watch-content text-center">
                                     <img class="img-watch" src="images/section1/n_watch_3.png" />
                                     <p class="watch_model">CB5020-87L<br>NT$30,900</p>
@@ -341,7 +359,7 @@
                     <div class="watch-cate d-flex flex-column align-items-center">
                             <img class="img-logo" src="images/section1/wlogo_3.png" />
                             <p class="wlogo_title">光動能潛水錶</p>
-                            <div class="watch-content text-center">
+                            <div class="watch-content text-center w-100">
                                 <img class="img-watch" src="images/section1/n_watch_5.png" />
                                 <p class="watch_model">BN0195-54E<br>NT$14,900</p>
                                 <p>200米防水潛水錶</p>
@@ -439,7 +457,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="watch-right position-relative d-none d-md-block">
+                    <div class="watch-right position-relative d-none d-lg-block">
                         <ul class="h-100">
                             <li class="active">
                                 <a class="d-flex align-items-center justify-content-center" href="http://www.citizenwatch.com.tw/productDetail.asp?sn=644" target="_blank">
@@ -610,7 +628,6 @@
             </div>
         </div>
     </div>
-<!--
     <script gumby-touch="js/libs" src="js/libs/gumby.js"></script>
     <script src="js/libs/ui/gumby.retina.js"></script>
     <script src="js/libs/ui/gumby.fixed.js"></script>
@@ -622,7 +639,6 @@
     <script src="js/libs/ui/jquery.validation.js"></script>
     <script src="js/libs/gumby.init.js"></script>
     <script src="js/plugins.js"></script>
--->
     <script src="js/main2.js"></script>
     <script src="js/custom.js"></script>
     <script>
