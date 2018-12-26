@@ -94,7 +94,7 @@ a , a:hover {
     transform: translateX(100px);
 }
 .movie-watch img {
-    max-width: 250px;
+    max-height: 40vh;
 }
 .movie-title {
     font-weight: 400;
