@@ -50,7 +50,7 @@ a , a:hover {
 }
 .section-nav {
     position: fixed;
-    right: 40px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -62,13 +62,19 @@ a , a:hover {
     opacity: 0.8;
     cursor: pointer;
     padding: 0;
+	height: 80px;
 }
 .section-nav li a {
     color: white;
-    height: 80px;
+    /*height: 80px;*/
     padding-right: 15px;
     line-height: 80px;
     display: block;
+}
+.section-nav li:nth-child(1) a {
+    line-height: 1em;
+    margin-top: 18px;
+	text-align: center;
 }
 .section-nav li:hover , .section-nav li.active {
     opacity: 1;
@@ -100,15 +106,15 @@ a , a:hover {
 }
 .star-left {
     display: flex;
-    left: -20vh;
-    transform: translateX(-100px);
+    left: -10vh;
+    transform: translateX(-180px);
     bottom: 0;
 }
 .star-right {
     display: flex;
-    right: -10vh;
-    transform: translateX(100px);
- bottom: 0;
+    right: 0vh;
+    transform: translateX(180px);
+    bottom: 0;
 }
 .movie-watch img {
     max-height: 40vh;
@@ -302,6 +308,9 @@ a , a:hover {
 }
 .movie-content-mobile {
     display: none;
+}
+.watch-wrap {
+    padding: 0 50px;
 }
 .watch-right {
     flex: 1;
@@ -507,7 +516,7 @@ a , a:hover {
     }
     #section0 .movie-btn {
         transform: scale(0.6);
-        margin-top: -4%;
+        margin-top: -2%;
     }
     .movie-title {
         margin-bottom: 0;
@@ -640,6 +649,7 @@ a , a:hover {
         top: 5%;
         left: 50%;
         transform: translateX(-50%);
+        width: 100%;
     }
     #section3 {
         padding: 80px 0;

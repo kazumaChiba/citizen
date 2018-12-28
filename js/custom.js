@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    if(navigator.userAgent.match("MSIE")){
+        alert();
+    }
     /* Slick */
     $('.slick-wrap').slick({
         slidesToShow: 1,
@@ -65,3 +68,4 @@ $(document).ready(function(){
     });
 
 });
+ 
